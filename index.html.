@@ -32,9 +32,21 @@
       <h2>Conoce a Nuestros Dentistas</h2>
       <div class="grid-equipo">
         <article class="dentista">
-          <img src="img/dental.jpg" alt="Dra. Ana Pérez" />
+          <img src="img/dental1.jpg" alt="Dra. Ana Pérez" />
           <h3>Dra. Ana Pérez</h3>
           <p>Ortodoncia</p>
+          <img src="img/dental2.jpg" alt="Dr. Juan Loza" />
+          <h3>Dr. Juan Loza</h3>
+          <p> Cirujia Maxilofacial</p>
+           <img src="img/dental3.jpg" alt="Dra. Antonela Padilla" />
+          <h3>Dra. Antonela Padilla</h3>
+          <p>Odontopediatria</p>
+          <img src="img/dental4.jpg" alt="Dra. Natalia Perez" />
+          <h3>Dra. Natalia Perez</h3>
+          <p>Endodoncia</p>
+          <img src="img/dental5.jpg" alt="Dr. Daniel Macias" />
+          <h3>Dr. Daniel Macias</h3>
+          <p>Periodoncista</p>
         </article>
       </div>
     </section>
