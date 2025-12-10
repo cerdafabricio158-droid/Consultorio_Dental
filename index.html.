@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clínica Dental Sonrisa Feliz</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Clínica Dental Sonrisa Feliz</h1>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#citas">Citas</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="servicios">
+      <h2>Nuestras Especialidades</h2>
+      <ul class="lista-servicios">
+        <li>Ortodoncia</li>
+        <li>Endodoncia</li>
+        <li>Cirugía Maxilofacial</li>
+        <li>Periodoncia</li>
+        <li>Odontopediatría</li>
+      </ul>
+    </section>
+
+    <section id="equipo">
+      <h2>Conoce a Nuestros Dentistas</h2>
+      <div class="grid-equipo">
+        <article class="dentista">
+          <img src="img/dental.jpg" alt="Dra. Ana Pérez" />
+          <h3>Dra. Ana Pérez</h3>
+          <p>Ortodoncia</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="citas">
+      <h2>Solicitar Cita</h2>
+      <form id="citaForm" novalidate>
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" required>
+
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" name="telefono" type="tel" required>
+
+        <label for="especialidad">Especialidad</label>
+        <select id="especialidad" name="especialidad" required>
+          <option value="">Seleccione...</option>
+          <option>Ortodoncia</option>
+          <option>Endodoncia</option>
+          <option>Cirugía Maxilofacial</option>
+          <option>Periodoncia</option>
+          <option>Odontopediatría</option>
+        </select>
+
+        <label for="fecha">Fecha preferida</label>
+        <input id="fecha" name="fecha" type="date" required>
+
+        <button type="submit">Enviar Solicitud</button>
+        <p id="mensaje" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Clínica Dental CBTIS 49</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
