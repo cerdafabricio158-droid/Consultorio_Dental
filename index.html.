@@ -4,11 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Clínica Dental Sonrisa Feliz</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Clínica Dental Sonrisa Feliz</h1>
+    <h1><i class="fas fa-tooth"></i> Clínica Dental Sonrisa Feliz</h1>
     <nav>
       <a href="#servicios">Servicios</a>
       <a href="#equipo">Equipo</a>
@@ -20,11 +21,11 @@
     <section id="servicios">
       <h2>Nuestras Especialidades</h2>
       <ul class="lista-servicios">
-        <li>Ortodoncia</li>
-        <li>Endodoncia</li>
-        <li>Cirugía Maxilofacial</li>
-        <li>Periodoncia</li>
-        <li>Odontopediatría</li>
+        <li><i class="fas fa-braces"></i> Ortodoncia</li>
+        <li><i class="fas fa-tooth"></i> Endodoncia</li>
+        <li><i class="fas fa-user-md"></i> Cirugía Maxilofacial</li>
+        <li><i class="fas fa-teeth"></i> Periodoncia</li>
+        <li><i class="fas fa-child"></i> Odontopediatría</li>
       </ul>
     </section>
 
@@ -32,21 +33,39 @@
       <h2>Conoce a Nuestros Dentistas</h2>
       <div class="grid-equipo">
         <article class="dentista">
-          <img src="img/dental1.jpg" alt="Dra. Ana Pérez" />
-          <h3>Dra. Ana Pérez</h3>
-          <p>Ortodoncia</p>
-          <img src="img/dental2.jpg" alt="Dr. Juan Loza" />
-          <h3>Dr. Juan Loza</h3>
-          <p> Cirujia Maxilofacial</p>
-           <img src="img/dental3.jpg" alt="Dra. Antonela Padilla" />
-          <h3>Dra. Antonela Padilla</h3>
-          <p>Odontopediatria</p>
-          <img src="img/dental4.jpg" alt="Dra. Natalia Perez" />
-          <h3>Dra. Natalia Perez</h3>
-          <p>Endodoncia</p>
-          <img src="img/dental5.jpg" alt="Dr. Daniel Macias" />
-          <h3>Dr. Daniel Macias</h3>
-          <p>Periodoncista</p>
+          <img src="img/imagen.png" alt="Dra. Ana Pérez" />
+          <div class="dentista-info">
+            <h3>Dra. Ana Pérez</h3>
+            <p>Ortodoncia</p>
+          </div>
+        </article>
+        <article class="dentista">
+          <img src="img/imagen.png" alt="Dr. Juan Loza" />
+          <div class="dentista-info">
+            <h3>Dr. Juan Loza</h3>
+            <p>Cirugía Maxilofacial</p>
+          </div>
+        </article>
+        <article class="dentista">
+          <img src="img/imagen.png" alt="Dra. Antonela Padilla" />
+          <div class="dentista-info">
+            <h3>Dra. Antonela Padilla</h3>
+            <p>Odontopediatría</p>
+          </div>
+        </article>
+        <article class="dentista">
+          <img src="img/imagen.png" alt="Dra. Natalia Perez" />
+          <div class="dentista-info">
+            <h3>Dra. Natalia Perez</h3>
+            <p>Endodoncia</p>
+          </div>
+        </article>
+        <article class="dentista">
+          <img src="img/imagen.png" alt="Dr. Daniel Macias" />
+          <div class="dentista-info">
+            <h3>Dr. Daniel Macias</h3>
+            <p>Periodoncia</p>
+          </div>
         </article>
       </div>
     </section>
