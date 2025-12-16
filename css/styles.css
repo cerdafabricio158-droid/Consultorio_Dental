@@ -1,12 +1,350 @@
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;background:#f4f4f9;color:#222}
-header{background:#007bff;color:#fff;padding:18px;text-align:center}
-nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:600}
-section{padding:40px 20px;text-align:center}
-.grid-equipo{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:1000px;margin:0 auto}
-#citas{max-width:700px;margin:20px auto}
-#citaForm{background:#fff;padding:24px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
-#citaForm label,#citaForm input,#citaForm select,#citaForm button{display:block;width:100%;margin-bottom:12px}
-#citaForm input,#citaForm select{padding:10px;border:1px solid #ccc;border-radius:6px}
-#citaForm button{padding:12px;background:#28a745;color:#fff;border:none;border-radius:6px;cursor:pointer}
-#mensaje{font-weight:600}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 50%, #17a2b8 100%), radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  background-size: 100% 100%, 200px 200px, 150px 150px;
+  background-position: 0 0, 0 0, 100% 100%;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 25px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+#servicios {
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.lista-servicios {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lista-servicios li {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lista-servicios li:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);
+}
+
+#equipo {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.grid-equipo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dentista {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dentista:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dentista img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #28a745;
+  flex-shrink: 0;
+}
+
+.dentista-info {
+  text-align: left;
+}
+
+.dentista h3 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+}
+
+.dentista p {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+#citas {
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+#citaForm {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+#citaForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: left;
+}
+
+#citaForm input,
+#citaForm select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#citaForm input:focus,
+#citaForm select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+#citaForm button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#citaForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+}
+
+#mensaje {
+  font-weight: 600;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .lista-servicios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dentista {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dentista-info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .lista-servicios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-equipo {
+    flex-direction: column;
+  }
+
+  .dentista {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dentista-info {
+    text-align: center;
+  }
+
+  #citaForm {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .dentista img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .lista-servicios li {
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
