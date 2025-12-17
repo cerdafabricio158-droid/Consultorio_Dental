@@ -13,6 +13,7 @@
     <nav>
       <a href="#servicios">Servicios</a>
       <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
       <a href="#citas">Citas</a>
     </nav>
   </header>
@@ -40,7 +41,7 @@
           </div>
         </article>
         <article class="dentista">
-          <img src="img/dental2.jpg" alt="Dr. Juan Loza" />
+          <img src="img/dental4.jpg" alt="Dr. Juan Loza" />
           <div class="dentista-info">
             <h3>Dr. Juan Loza</h3>
             <p>Cirugía Maxilofacial</p>
@@ -54,7 +55,7 @@
           </div>
         </article>
         <article class="dentista">
-          <img src="img/dental4.jpg" alt="Dra. Natalia Perez" />
+          <img src="img/dental2.jpg" alt="Dra. Natalia Perez" />
           <div class="dentista-info">
             <h3>Dra. Natalia Perez</h3>
             <p>Endodoncia</p>
@@ -67,6 +68,27 @@
             <p>Periodoncia</p>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Atención al Cliente</h2>
+      <div class="grid-contacto">
+        <div class="contacto-card">
+          <i class="fas fa-user-circle"></i>
+          <h3>contacto 2</h3>
+          <p>valwknow-github</p>
+        </div>
+        <div class="contacto-card">
+          <i class="fas fa-user-circle"></i>
+          <h3>contacto 2</h3>
+          <p>fatimatorres0809-github</p>
+        </div>
+        <div class="contacto-card">
+          <i class="fas fa-user-circle"></i>
+          <h3>contacto 3</h3>
+          <p>cerdafabricio158-droid-github</p>
+        </div>
       </div>
     </section>
 
@@ -99,7 +121,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Clínica Dental </p>
+    <p>&copy; 2025 Clínica Dental Sonrisa Feliz</p>
   </footer>
 
   <script src="js/main.js"></script>
